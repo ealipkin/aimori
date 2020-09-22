@@ -1,0 +1,46 @@
+{
+  "name": "aimori",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "Ai Mori",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ealipkin/ai-mori.git"
+  },
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "npm i && gulp prod",
+    "static": "gulp static"
+  },
+  "author": "Alipkin Eugenue",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.7.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-buster": "^1.1.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-svgo": "^2.1.1",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.5",
+    "run-sequence": "^1.2.2"
+  }
+}

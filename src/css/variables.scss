@@ -1,0 +1,101 @@
+//mediaqueries
+$desktop: "(min-width: 1296px)";
+$laptop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px)";
+
+$desktop-width: "1296px";
+$laptop-width: "1024px";
+$tablet-width: "768px";
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media #{$laptop} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+
+//colors
+$red: #FE1F3F;
+
+//rouble
+@mixin rouble() {
+  &:after {
+    font-family: 'PT Rouble Sans';
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-left: 3px;
+    top: -2px;
+    content: 'З';
+  }
+}
+
+@mixin loader($color: $red) {
+  border: 4px double;
+  border-radius: 50%;
+  border-color: transparent $color $color;
+  animation: loader-spin 690ms infinite linear;
+}
+
+@mixin arrow-down($color: #666666) {
+  width: 14px;
+  height: 14px;
+  border: 2px solid $color;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@keyframes loader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loader-spin {
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes loader-spin {
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loader-spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

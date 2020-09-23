@@ -9990,8 +9990,8 @@ function fillSlider(videos) {
   slider.insertAdjacentHTML('afterbegin', markup);
 }
 
-function runVideo(id) {
-  var iframe = "<iframe src=\"https://www.youtube.com/embed/".concat(id, "?autoplay=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"allowfullscreen\"></iframe>");
+function runVideo(id, title) {
+  var iframe = "<iframe title=\"".concat(title || 'Youtube Video', "\" src=\"https://www.youtube.com/embed/").concat(id, "?autoplay=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"allowfullscreen\"></iframe>");
   videoBackground.style.backgroundImage = "url(".concat(PREVIEW_URL, "/").concat(id, "/").concat(BACKGROUND_IMAGE, ")");
   videoPlayer.innerHTML = '';
   videoPlayer.insertAdjacentHTML('afterbegin', iframe);
@@ -10030,6 +10030,7 @@ function hideOverlay() {
       var activeButton = document.querySelector(".".concat(ACTIVE_BUTTON_CLASS));
       var target = event.currentTarget;
       var videoId = target.dataset.id;
+      var title = target.querySelector('img').alt;
       hideOverlay();
 
       if (activeButton) {
@@ -10037,7 +10038,7 @@ function hideOverlay() {
       }
 
       target.classList.add(ACTIVE_BUTTON_CLASS);
-      runVideo(videoId);
+      runVideo(videoId, title);
     });
   });
   var DEFAULT_VIDEO_INDEX = 0;
@@ -10045,7 +10046,7 @@ function hideOverlay() {
   videosButtons[DEFAULT_VIDEO_INDEX].classList.add(ACTIVE_BUTTON_CLASS);
   videoBackground.style.backgroundImage = "url(".concat(PREVIEW_URL, "/").concat(parseVideoId(defaultVideo), "/").concat(BACKGROUND_IMAGE, ")");
   playOverlay.addEventListener('click', function () {
-    runVideo(parseVideoId(defaultVideo));
+    runVideo(parseVideoId(defaultVideo), defaultVideo.title);
     hideOverlay();
   });
   var mySwiper = new Swiper('.swiper-container', {

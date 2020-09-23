@@ -126,8 +126,8 @@ function fillSlider(videos) {
   slider.insertAdjacentHTML('afterbegin', markup);
 }
 
-function runVideo(id) {
-  const iframe = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>`;
+function runVideo(id, title) {
+  const iframe = `<iframe title="${title || 'Youtube Video'}" src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>`;
   videoBackground.style.backgroundImage = `url(${PREVIEW_URL}/${id}/${BACKGROUND_IMAGE})`;
   videoPlayer.innerHTML = '';
   videoPlayer.insertAdjacentHTML('afterbegin', iframe);
@@ -155,12 +155,13 @@ function hideOverlay() {
       const activeButton = document.querySelector(`.${ACTIVE_BUTTON_CLASS}`);
       const target = event.currentTarget;
       const videoId = target.dataset.id;
+      const title = target.querySelector('img').alt;
       hideOverlay();
       if (activeButton) {
         activeButton.classList.remove(ACTIVE_BUTTON_CLASS);
       }
       target.classList.add(ACTIVE_BUTTON_CLASS);
-      runVideo(videoId);
+      runVideo(videoId, title);
     });
   });
 
@@ -169,7 +170,7 @@ function hideOverlay() {
   videosButtons[DEFAULT_VIDEO_INDEX].classList.add(ACTIVE_BUTTON_CLASS);
   videoBackground.style.backgroundImage = `url(${PREVIEW_URL}/${parseVideoId(defaultVideo)}/${BACKGROUND_IMAGE})`;
   playOverlay.addEventListener('click', () => {
-    runVideo(parseVideoId(defaultVideo));
+    runVideo(parseVideoId(defaultVideo), defaultVideo.title);
     hideOverlay();
   });
 

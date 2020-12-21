@@ -2,6 +2,17 @@ doctype html
 
 html(lang="ru")
   head
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-178732519-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178732519-1');
+
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="description" content="Ai Mori Блогер Официальный сайт")
@@ -47,6 +58,6 @@ html(lang="ru")
 
     include ../svg
 
-    script(src="js/main.js")
+    script(src="js/main.js?1")
 
 

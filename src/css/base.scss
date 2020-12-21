@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background: $colorHex;
-  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   color: white;
   padding-bottom: 30px;
 }
@@ -76,7 +76,11 @@ button {
 .container {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 0 20px;
+  padding: 0 10px;
+
+  @include tablet() {
+    padding: 0 20px;
+  }
 }
 
 .content-wrapper {
@@ -218,12 +222,30 @@ button {
   &__video-button {
     font-size: 0;
     appearance: none;
+    width: 100%;
     display: block;
     background: transparent;
 
     &--active {
       opacity: 0.7;
     }
+  }
+
+  &__description {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+  }
+
+  &__image {
+    background: transparent no-repeat center;
+    background-size: contain;
+    padding-bottom: 50%;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
   }
 
   &__button {
@@ -233,13 +255,17 @@ button {
     background: white;
     border-radius: 50%;
     text-align: center;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     margin-top: 0;
     transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: none;
 
     @include tablet() {
+      display: flex;
       width: 30px;
       height: 30px;
     }
@@ -278,7 +304,10 @@ button {
   }
 
   &__slider {
-    margin: 0 30px;
+
+    @include laptop() {
+      margin: 0 30px;
+    }
 
     img {
       display: block;
@@ -296,15 +325,6 @@ button {
       text-align: center;
       //font-size: 18px;
       //background: #fff;
-      height: 77px;
-
-      @include tablet() {
-        height: 98px;
-      }
-
-      @include laptop() {
-        height: 113px;
-      }
 
       display: flex;
       justify-content: center;
@@ -394,4 +414,9 @@ button {
 .section {
   margin-top: 80px;
   margin-bottom: 80px;
+}
+
+
+#player_playlist pjsdiv {
+  text-decoration: none !important;
 }

@@ -22,6 +22,11 @@ ul {
 
 a {
   color: white;
+  transition: all 0.5s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 button {
@@ -34,7 +39,7 @@ button {
 
 .background-image {
   position: absolute;
-  background: url(../images/plastilin.jpg) no-repeat center;
+  background: url(../images/nevesta2.jpg) no-repeat top center;
   background-size: cover;
   padding-bottom: 100vw;
   left: 0;
@@ -66,12 +71,15 @@ button {
     bottom: 0;
     left: 0;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(2, 22, 49, 1) 17%, rgba(0, 212, 255, 0) 100%);
+    background: linear-gradient(0deg, $colorHex 17%, rgba(0, 212, 255, 0) 100%);
     display: block;
     z-index: 2;
   }
 }
 
+#covers_playlist, #self_playlist {
+  max-height: 302px !important;
+}
 
 .container {
   margin: 0 auto;
@@ -111,9 +119,28 @@ button {
   //margin-top: 80px;
   //margin-bottom: 80px;
 
+  @include laptop() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    text-align: center;
+    margin-top: 10px;
+  }
+
   &__inner {
-    margin: 0 auto;
-    max-width: 500px;
+    width: 100%;
+
+    @include laptop() {
+      max-width: 450px;
+    }
+  }
+
+  &__player {
+    overflow: auto;
+    height: 600px !important;
   }
 }
 

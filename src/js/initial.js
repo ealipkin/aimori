@@ -14,6 +14,12 @@ const ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 
 const videos = [
   {
+    shortTitle: "Evanescence - Bring Me To Life",
+    title: "Evanescence - Bring Me To Life НА РУССКОМ/RUS COVER ft MULTIVERSE & Tashdrummer",
+    href: "https://www.youtube.com/watch?v=QODn6OwRrOE",
+    file: 'audio/covers/40 - Ai Mori - Bring me to live (Evanescence rus cover).mp3'
+  },
+  {
     shortTitle: "Linkin Park - Final Masquerade",
     title: "Linkin Park - Final Masquerade (RUS COVER/КАВЕР НА РУССКОМ ЯЗЫКЕ)",
     href: "https://www.youtube.com/watch?v=48f-fqXrKIc",
@@ -298,7 +304,19 @@ const SONGS = [
   {title: 'Кислород', file: '/audio/monada/kislorod.mp3', poster: 'images/covers/monada/kislorod_cover.jpg'},
   {title: 'В моих венах', file: '/audio/monada/v_moih_venah.mp3', poster: 'images/covers/monada/v_venah_cover.jpg'},
   {
-    title: 'Летели на юг (Альбом)', folder: [
+    title: 'Стример (Альбом 2020)', folder: [
+      {title: 'Стример', file: '/audio/strimer/01_strimer.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Глад Валакас', file: '/audio/strimer/02_valakas.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Вове Братишкину', file: '/audio/strimer/03_bratishkin.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: '50 оттенков Шевцова', file: '/audio/strimer/04_shevcov.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Hardplay', file: '/audio/strimer/05_hardplay.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Бл*дский Twitch', file: '/audio/strimer/06_twitch.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Оляша', file: '/audio/strimer/07_olyasha.mp3', poster: 'images/covers/strimer.jpg'},
+      {title: 'Бан', file: '/audio/strimer/08_ban.mp3', poster: 'images/covers/strimer.jpg'},
+    ]
+  },
+  {
+    title: 'Летели на юг (Альбом 2019)', folder: [
       {title: 'SOS', file: '/audio/monada/leteli_na_yug/01_sos.mp3', poster: 'images/covers/monada/leteli_na_yug.jpg'},
       {
         title: 'Все не так',

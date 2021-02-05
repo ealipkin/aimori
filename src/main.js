@@ -9865,6 +9865,11 @@ var SLIDE_IMAGE = PreviewUrls.MEDIUM;
 var BACKGROUND_IMAGE = PreviewUrls.STANDART;
 var ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 var videos = [{
+  shortTitle: "Guano Apes - Open Your Eyes НА РУССКОМ/RUS COVER",
+  title: "Guano Apes - Open Your Eyes НА РУССКОМ/RUS COVER",
+  href: "https://www.youtube.com/watch?v=Ew5iNUlv-aw",
+  file: 'audio/covers/41 - Ai Mori - Open Your Eyes (Guano Apes rus cover).mp3'
+}, {
   shortTitle: "Evanescence - Bring Me To Life",
   title: "Evanescence - Bring Me To Life НА РУССКОМ/RUS COVER ft MULTIVERSE & Tashdrummer",
   href: "https://www.youtube.com/watch?v=QODn6OwRrOE",
@@ -9948,7 +9953,7 @@ var videos = [{
   shortTitle: "Three Days Grace - Over and Over",
   title: "Three Days Grace - Over and Over RUS COVER/ КАВЕР НА РУССКОМ ЯЗЫКЕ",
   href: "https://www.youtube.com/watch?v=-efKUN4XIoM",
-  file: 'audio/covers/24 - Ai Mori - Over and over (Three Days Grace rus cover).mp3'
+  file: 'audio/covers/24 - Ai Mori - OverAndOver (Three Days Grace rus cover).mp3'
 }, {
   shortTitle: "BRING ME THE HORIZON - SHADOW MOSES",
   title: "BRING ME THE HORIZON - SHADOW MOSES RUS COVER/НА РУССКОМ В ЖЕНСКОЙ ВЕРСИИ",

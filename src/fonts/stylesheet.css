@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Walls Rough Bold DEMO';
+    src: url('TTWallsRoughBoldDEMO.woff2') format('woff2'),
+        url('TTWallsRoughBoldDEMO.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

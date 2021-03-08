@@ -1,5 +1,15 @@
-$colorHex: #021631;
-$titleFont: 'Oswald', sans-serif;
+$colorHex: #aa6471;
+$titleFont: 'TT Walls Rough', sans-serif;
+
+@font-face {
+  font-family: 'TT Walls Rough';
+  src: url('../fonts/TTWallsRoughBoldDEMO.woff2') format('woff2'),
+  url('../fonts/TTWallsRoughBoldDEMO.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --swiper-theme-color: white;
@@ -39,16 +49,21 @@ button {
 
 .background-image {
   position: absolute;
-  background: url(../images/nevesta2.jpg) no-repeat top center;
   background-size: cover;
-  padding-bottom: 100vw;
+  //padding-bottom: 100vw;
   left: 0;
   top: 0;
   width: 100%;
   z-index: -1;
+  background: url(../images/tc_small.jpg) no-repeat top center;
+  padding-bottom: 100vh;
+
+  @include tablet() {
+    background-image: url(../images/tc_big.jpg);
+  }
 
   @include laptop() {
-    padding-bottom: 40vw;
+    padding-bottom: 90vh;
   }
 
   &:after {
@@ -81,6 +96,7 @@ button {
   max-height: 302px !important;
 }
 
+
 .container {
   margin: 0 auto;
   max-width: 1000px;
@@ -92,9 +108,9 @@ button {
 }
 
 .content-wrapper {
-  margin-top: 30vw;
+  margin-top: 10vw;
   @include laptop() {
-    margin-top: 15vw;
+    margin-top: 5vw;
   }
 }
 
@@ -113,6 +129,7 @@ button {
 .content-title {
   color: white;
   margin-bottom: 40px;
+  font-family: $titleFont;
 }
 
 .player {

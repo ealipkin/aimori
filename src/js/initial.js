@@ -14,6 +14,18 @@ const ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 
 const videos = [
   {
+    shortTitle: "Halestorm - I Miss The Misery",
+    title: "Halestorm - I Miss The Misery RUS COVER/НА РУССКОМ",
+    href: "https://www.youtube.com/watch?v=1NL0-OLccPw",
+    file: 'audio/covers/43 - Ai Mori - I Miss The Misery (Halestorm rus cover).mp3'
+  },
+  {
+    shortTitle: "The Weeknd - Blinding Lights (ft. Utopia Show)",
+    title: "The Weeknd - Blinding Lights RUS COVER НА РУССКОМ (ft. Utopia Show)",
+    href: "https://www.youtube.com/watch?v=hoSMiVZjW04",
+    file: 'audio/covers/42 - Ai Mori - Blinding Lights (The Weeknd rus cover feat Utopia).mp3'
+  },
+  {
     shortTitle: "Guano Apes - Open Your Eyes НА РУССКОМ/RUS COVER",
     title: "Guano Apes - Open Your Eyes НА РУССКОМ/RUS COVER",
     href: "https://www.youtube.com/watch?v=Ew5iNUlv-aw",
@@ -296,13 +308,15 @@ const videos = [
 ];
 
 const SONGS = [
-  {title: 'Невеста', file: '/audio/AiMori-Nevesta.mp3', poster: 'images/covers/nevesta_thumb.jpg'},
-  {title: 'Джин Тоник', file: '/audio/AiMori-JinTonic.mp3', poster: 'images/covers/jin_thumb.jpg'},
-  {title: 'Пластилин', file: '/audio/AiMori-Plastilin.mp3', poster: 'images/covers/plastilin_thumb.jpg'},
   {
-    title: 'Капелька летней грусти',
-    file: '/audio/AiMori-Kapelka.mp3',
-    poster: 'images/covers/kapelka_thumb.jpg'
+    title: 'TOXIC CANDY (Альбом 2021)', folder: [
+      {title: 'Капитан Америка', file: '/audio/toxic-candy/01 - Капитан Америка.mp3', poster: 'images/tc_small.jpg'},
+      {title: 'Капелька летней грусти', file: '/audio/toxic-candy/02 - Капелька летней грусти.mp3', poster: 'images/tc_small.jpg'},
+      {title: 'Джин Тоник', file: '/audio/toxic-candy/03 - Джин-тоник.mp3', poster: 'images/tc_small.jpg'},
+      {title: 'Фанфик', file: '/audio/toxic-candy/04 - Фанфик.mp3', poster: 'images/tc_small.jpg'},
+      {title: 'Пластилин', file: '/audio/toxic-candy/05 - Пластилин.mp3', poster: 'images/tc_small.jpg'},
+      {title: 'Невеста', file: '/audio/toxic-candy/06 - Невеста.mp3', poster: 'images/tc_small.jpg'},
+    ]
   },
   {title: 'Электро', file: 'audio/AiMori-Elektro.mp3', poster: 'images/covers/electro_thumb.jpg'},
   {title: 'Тройничек', file: '/audio/AiMori-Troinichek.mp3', poster: 'images/covers/troinichek_thumb.jpg'},
@@ -363,11 +377,11 @@ const SONGS = [
   },
 ];
 
-
-const videoPlayer = document.querySelector('.video-container');
-const playOverlay = document.querySelector('.videos__play-overlay');
-const videoPreloader = document.querySelector('.videos__preloader');
-const videoBackground = document.querySelector('.videos__background');
+const coversSection = document.querySelector('.videos--covers');
+const videoPlayer = coversSection.querySelector('.video-container');
+const playOverlay = coversSection.querySelector('.videos__play-overlay');
+const videoPreloader = coversSection.querySelector('.videos__preloader');
+const videoBackground = coversSection.querySelector('.videos__background');
 
 function parseVideoId(video) {
   return video.href.split('v=').pop();

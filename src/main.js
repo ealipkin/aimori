@@ -9865,6 +9865,11 @@ var SLIDE_IMAGE = PreviewUrls.MEDIUM;
 var BACKGROUND_IMAGE = PreviewUrls.STANDART;
 var ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 var videos = [{
+  shortTitle: "Roxette - It Must Have Been Love ",
+  title: "Roxette - It Must Have Been Love RUS COVER/ НА РУССКОМ",
+  href: "https://www.youtube.com/watch?v=sO4duN9scx4",
+  file: 'audio/covers/44 - Ai Mori -  It Must Have Been Love (Roxette rus cover).mp3'
+}, {
   shortTitle: "Halestorm - I Miss The Misery",
   title: "Halestorm - I Miss The Misery RUS COVER/НА РУССКОМ",
   href: "https://www.youtube.com/watch?v=1NL0-OLccPw",
@@ -10239,7 +10244,8 @@ function parseVideoId(video) {
 function generateSlides(videos) {
   return videos.reduce(function (acc, video) {
     var videoId = parseVideoId(video);
-    return acc + "<div class=\"swiper-slide\">\n        <button type=\"button\" data-id=\"".concat(videoId, "\" class=\"videos__video-button\">\n          <span class=\"videos__image swiper-lazy\" data-background=\"").concat(PREVIEW_URL, "/").concat(videoId, "/").concat(SLIDE_IMAGE, "\">\n            <span class=\"swiper-lazy-preloader\"></span>\n          </span>\n          <span class=\"videos__description\">").concat(video.shortTitle, "</span>\n        </button>\n      </div>");
+    var url = "".concat(PREVIEW_URL, "/").concat(videoId, "/").concat(SLIDE_IMAGE);
+    return acc + "<div class=\"swiper-slide\">\n        <button type=\"button\" data-id=\"".concat(videoId, "\" class=\"videos__video-button\">\n          <span class=\"videos__image swiper-lazy\" data-background=\"").concat(url, "\">\n            <span class=\"swiper-lazy-preloader\"></span>\n          </span>\n          <span class=\"videos__description\">").concat(video.shortTitle, "</span>\n        </button>\n      </div>");
   }, '');
 }
 
@@ -10270,7 +10276,8 @@ function initVideoSlider() {
   var DEFAULT_VIDEO_INDEX = 0;
   var defaultVideo = videos[DEFAULT_VIDEO_INDEX];
   videosButtons[DEFAULT_VIDEO_INDEX].classList.add(ACTIVE_BUTTON_CLASS);
-  videoBackground.style.backgroundImage = "url(".concat(PREVIEW_URL, "/").concat(parseVideoId(defaultVideo), "/").concat(BACKGROUND_IMAGE, ")");
+  var url = "".concat(PREVIEW_URL, "/").concat(parseVideoId(defaultVideo), "/").concat(BACKGROUND_IMAGE);
+  videoBackground.style.backgroundImage = "url(".concat(url, ")");
   playOverlay.addEventListener('click', function () {
     runVideo(parseVideoId(defaultVideo), defaultVideo.title);
     hideOverlay();

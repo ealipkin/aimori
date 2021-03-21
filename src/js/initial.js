@@ -14,6 +14,12 @@ const ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 
 const videos = [
   {
+    shortTitle: "Roxette - It Must Have Been Love ",
+    title: "Roxette - It Must Have Been Love RUS COVER/ НА РУССКОМ",
+    href: "https://www.youtube.com/watch?v=sO4duN9scx4",
+    file: 'audio/covers/44 - Ai Mori -  It Must Have Been Love (Roxette rus cover).mp3'
+  },
+  {
     shortTitle: "Halestorm - I Miss The Misery",
     title: "Halestorm - I Miss The Misery RUS COVER/НА РУССКОМ",
     href: "https://www.youtube.com/watch?v=1NL0-OLccPw",
@@ -311,7 +317,11 @@ const SONGS = [
   {
     title: 'TOXIC CANDY (Альбом 2021)', folder: [
       {title: 'Капитан Америка', file: '/audio/toxic-candy/01 - Капитан Америка.mp3', poster: 'images/tc_small.jpg'},
-      {title: 'Капелька летней грусти', file: '/audio/toxic-candy/02 - Капелька летней грусти.mp3', poster: 'images/tc_small.jpg'},
+      {
+        title: 'Капелька летней грусти',
+        file: '/audio/toxic-candy/02 - Капелька летней грусти.mp3',
+        poster: 'images/tc_small.jpg'
+      },
       {title: 'Джин Тоник', file: '/audio/toxic-candy/03 - Джин-тоник.mp3', poster: 'images/tc_small.jpg'},
       {title: 'Фанфик', file: '/audio/toxic-candy/04 - Фанфик.mp3', poster: 'images/tc_small.jpg'},
       {title: 'Пластилин', file: '/audio/toxic-candy/05 - Пластилин.mp3', poster: 'images/tc_small.jpg'},
@@ -390,10 +400,11 @@ function parseVideoId(video) {
 function generateSlides(videos) {
   return videos.reduce((acc, video) => {
     const videoId = parseVideoId(video);
+    const url = `${PREVIEW_URL}/${videoId}/${SLIDE_IMAGE}`;
     return acc +
       `<div class="swiper-slide">
         <button type="button" data-id="${videoId}" class="videos__video-button">
-          <span class="videos__image swiper-lazy" data-background="${PREVIEW_URL}/${videoId}/${SLIDE_IMAGE}">
+          <span class="videos__image swiper-lazy" data-background="${url}">
             <span class="swiper-lazy-preloader"></span>
           </span>
           <span class="videos__description">${video.shortTitle}</span>
@@ -429,7 +440,8 @@ function initVideoSlider() {
   const DEFAULT_VIDEO_INDEX = 0;
   const defaultVideo = videos[DEFAULT_VIDEO_INDEX];
   videosButtons[DEFAULT_VIDEO_INDEX].classList.add(ACTIVE_BUTTON_CLASS);
-  videoBackground.style.backgroundImage = `url(${PREVIEW_URL}/${parseVideoId(defaultVideo)}/${BACKGROUND_IMAGE})`;
+  const url = `${PREVIEW_URL}/${parseVideoId(defaultVideo)}/${BACKGROUND_IMAGE}`;
+  videoBackground.style.backgroundImage = `url(${url})`;
   playOverlay.addEventListener('click', () => {
     runVideo(parseVideoId(defaultVideo), defaultVideo.title);
     hideOverlay();

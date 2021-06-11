@@ -56,11 +56,11 @@ button {
   top: 0;
   width: 100%;
   z-index: -1;
-  background: url(../images/tc_small.jpg) no-repeat top center;
+  background: url(../images/drug_small.jpg) no-repeat top center;
   padding-bottom: 100vh;
 
   @include tablet() {
-    background-image: url(../images/tc_big.jpg);
+    background-image: url(../images/drug_big.jpg);
   }
 
   @include laptop() {
@@ -149,7 +149,8 @@ button {
 
   &__link {
     text-align: center;
-    margin-top: 10px;
+    margin-top: -10px;
+    margin-bottom: 20px;
   }
 
   &__inner {

@@ -11,13 +11,54 @@ const PLAYER_IMAGE = PreviewUrls.STANDART;
 const SLIDE_IMAGE = PreviewUrls.MEDIUM;
 const BACKGROUND_IMAGE = PreviewUrls.STANDART;
 const ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
-
 const videos = [
   {
-    shortTitle: "Roxette - It Must Have Been Love ",
+    shortTitle: "Against The Current - Legends Never Die",
+    title: "Legends Never Die (Against The Current) НА РУССКОМ/RUS COVER",
+    href: "https://www.youtube.com/watch?v=8JMeI-5CZB8",
+    file: 'audio/covers/52 - Ai Mori - Legends Never Die(Against The Current cover).mp3'
+  },
+  {
+    shortTitle: "ХАБИБ - Ягода малинка",
+    title: "ХАБИБ - Ягода малинка ПОП РОК КАВЕР/ POP ROCK COVER",
+    href: "https://www.youtube.com/watch?v=LMOFBnban4Y",
+    file: 'audio/covers/50 - Ai Mori - Малинка (Хабиб rock cover).mp3'
+  },
+  {
+    shortTitle: "Adele - Hello",
+    title: "Adele - Hello ROCK RUS COVER / НА РУССКОМ ЯЗЫКЕ РОК КАВЕР",
+    href: "https://www.youtube.com/watch?v=3hwwcitfEaQ",
+    file: 'audio/covers/49 - Ai Mori - Hello (Adele rus cover).mp3'
+  },
+  {
+    shortTitle: "Papa Roach - Scars",
+    title: "Papa Roach - Scars RUS COVER / НА РУССКОМ ЯЗЫКЕ",
+    href: "https://www.youtube.com/watch?v=vWfAnKadRwo",
+    file: 'audio/covers/48 - Ai Mori - Scars (Papa Roach rus cover).mp3'
+  },
+  {
+    shortTitle: "Sum 41 - Pieces",
+    title: "Sum 41 - Pieces RUS COVER/НА РУССКОМ",
+    href: "https://www.youtube.com/watch?v=27d9heGGbHY",
+    file: 'audio/covers/47 - Ai Mori - Pieces (Sum 41 rus cover).mp3'
+  },
+  {
+    shortTitle: "Kansas - Carry On Wayward Son",
+    title: "Kansas - Carry On Wayward Son RUS COVER/НА РУССКОМ (OST SUPERNATURAL)",
+    href: "https://www.youtube.com/watch?v=VnG9J5gD8_E",
+    file: 'audio/covers/46 - Ai Mori - Carry On Wayward Son (Kansas rus cover).mp3'
+  },
+  {
+    shortTitle: "Breaking Benjamin - The Diary of Jane",
+    title: "Breaking Benjamin - The Diary of Jane rus cover",
+    href: "https://www.youtube.com/watch?v=-rU_fnOReRQ",
+    file: 'audio/covers/45 - Ai Mori - The Diary of Jane (Breaking Benjamin rus cover).mp3'
+  },
+  {
+    shortTitle: "Roxette - It Must Have Been Love",
     title: "Roxette - It Must Have Been Love RUS COVER/ НА РУССКОМ",
     href: "https://www.youtube.com/watch?v=sO4duN9scx4",
-    file: 'audio/covers/44 - Ai Mori -  It Must Have Been Love (Roxette rus cover).mp3'
+    file: 'audio/covers/44 - Ai Mori - It Must Have Been Love (Roxette rus cover).mp3'
   },
   {
     shortTitle: "Halestorm - I Miss The Misery",
@@ -314,6 +355,7 @@ const videos = [
 ];
 
 const SONGS = [
+  {title: 'Друг', file: 'audio/AiMori-Drug.mp3', poster: 'images/drug_small.jpg'},
   {
     title: 'TOXIC CANDY (Альбом 2021)', folder: [
       {title: 'Капитан Америка', file: '/audio/toxic-candy/01 - Капитан Америка.mp3', poster: 'images/tc_small.jpg'},

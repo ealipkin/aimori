@@ -13,10 +13,38 @@ const BACKGROUND_IMAGE = PreviewUrls.STANDART;
 const ACTIVE_BUTTON_CLASS = 'videos__video-button--active';
 const videos = [
   {
+    shortTitle: "Tokyo Ghoul OP RUSSIAN COVER",
+    title: "Tokyo Ghoul OP RUSSIAN COVER / Опенинг Токийский Гуль НА РУССКОМ",
+    href: "https://www.youtube.com/watch?v=y5aFcHuaLq0",
+    file: 'audio/covers/56 - Ai Mori - Tokyo Ghoul OP.mp3',
+  },
+  {
+    shortTitle: "Bring Me The Horizon - Throne",
+    title: "Bring Me The Horizon - Throne Ai Mori ft. Halocene",
+    href: "https://www.youtube.com/watch?v=Ha1DD-5rbsk",
+    file: 'audio/covers/55 - Ai Mori - Throne (Bring Me The Horizon cover).mp3',
+  },
+  {
+    shortTitle: "Bring Me The Horizon - Can You Feel My Heart",
+    title: "Bring Me The Horizon - Can You Feel My Heart Ai Mori ft. Halocene",
+    href: "https://www.youtube.com/watch?v=V0yjVumyH2A",
+    file: 'audio/covers/54 - Ai Mori - Can You Feel My Heart (Bring Me The Horizon cover).mp3',
+  },
+  {
+    shortTitle: "30 Seconds To Mars - From Yesterday",
+    title: "30 Seconds To Mars - From Yesterday RUS COVER/ НА РУССКОМ",
+    href: "https://www.youtube.com/watch?v=YHAMgoG5lBA",
+  },
+  {
     shortTitle: "Against The Current - Legends Never Die",
     title: "Legends Never Die (Against The Current) НА РУССКОМ/RUS COVER",
     href: "https://www.youtube.com/watch?v=8JMeI-5CZB8",
     file: 'audio/covers/52 - Ai Mori - Legends Never Die(Against The Current cover).mp3'
+  },
+  {
+    shortTitle: "Hoobastank - The Reason",
+    title: "Hoobastank - The Reason RUS COVER / НА РУССКОМ ЯЗЫКЕ",
+    href: "https://www.youtube.com/watch?v=FGzRe_Uv4lw",
   },
   {
     shortTitle: "ХАБИБ - Ягода малинка",
@@ -550,7 +578,7 @@ function initPlayers() {
 
   window.playerCovers = new Playerjs({
     id: 'covers',
-    file: videos.map(video => {
+    file: videos.filter(video => video.file).map(video => {
       const videoId = parseVideoId(video);
       return {
         ...video,

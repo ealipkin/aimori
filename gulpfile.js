@@ -17,7 +17,11 @@ const sass = require('gulp-sass');
 const inject = require('gulp-inject');
 const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+
+const uglifyes = require('uglify-es');
+const composer = require('gulp-uglify/composer');
+const uglify = composer(uglifyes, console);
+
 const bust = require('gulp-buster');
 const argv = minimist(process.argv.slice(2));
 const blocksFolder = 'src/blocks';
@@ -140,7 +144,16 @@ const buildProject = () =>
       'src/blocks/composite/**/*.js'
     ])
     .pipe(babel({
-      presets: ['@babel/preset-env']
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              esmodules: true,
+            },
+          },
+        ],
+      ],
     }))
     .pipe(concat('_project-code.js'))
     .pipe(gulp.dest('src/js/_compiled/'));

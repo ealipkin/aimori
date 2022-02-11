@@ -1,0 +1,157 @@
+[
+  {
+    "title": "Друг",
+    "file": "audio/AiMori-Drug.mp3",
+    "poster": "images/drug_small.jpg"
+  },
+  {
+    "title": "TOXIC CANDY (Альбом 2021)",
+    "folder": [
+      {
+        "title": "Капитан Америка",
+        "file": "/audio/toxic-candy/01 - Капитан Америка.mp3",
+        "poster": "images/tc_small.jpg"
+      },
+      {
+        "title": "Капелька летней грусти",
+        "file": "/audio/toxic-candy/02 - Капелька летней грусти.mp3",
+        "poster": "images/tc_small.jpg"
+      },
+      {
+        "title": "Джин Тоник",
+        "file": "/audio/toxic-candy/03 - Джин-тоник.mp3",
+        "poster": "images/tc_small.jpg"
+      },
+      {
+        "title": "Фанфик",
+        "file": "/audio/toxic-candy/04 - Фанфик.mp3",
+        "poster": "images/tc_small.jpg"
+      },
+      {
+        "title": "Пластилин",
+        "file": "/audio/toxic-candy/05 - Пластилин.mp3",
+        "poster": "images/tc_small.jpg"
+      },
+      {
+        "title": "Невеста",
+        "file": "/audio/toxic-candy/06 - Невеста.mp3",
+        "poster": "images/tc_small.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Электро",
+    "file": "audio/AiMori-Elektro.mp3",
+    "poster": "images/covers/electro_thumb.jpg"
+  },
+  {
+    "title": "Тройничек",
+    "file": "/audio/AiMori-Troinichek.mp3",
+    "poster": "images/covers/troinichek_thumb.jpg"
+  },
+  {
+    "title": "Дым",
+    "file": "/audio/monada/dym.mp3",
+    "poster": "images/covers/monada/dym_cover.jpg"
+  },
+  {
+    "title": "Кислород",
+    "file": "/audio/monada/kislorod.mp3",
+    "poster": "images/covers/monada/kislorod_cover.jpg"
+  },
+  {
+    "title": "В моих венах",
+    "file": "/audio/monada/v_moih_venah.mp3",
+    "poster": "images/covers/monada/v_venah_cover.jpg"
+  },
+  {
+    "title": "Стример (Альбом 2020)",
+    "folder": [
+      {
+        "title": "Стример",
+        "file": "/audio/strimer/01_strimer.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Глад Валакас",
+        "file": "/audio/strimer/02_valakas.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Вове Братишкину",
+        "file": "/audio/strimer/03_bratishkin.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "50 оттенков Шевцова",
+        "file": "/audio/strimer/04_shevcov.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Hardplay",
+        "file": "/audio/strimer/05_hardplay.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Бл*дский Twitch",
+        "file": "/audio/strimer/06_twitch.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Оляша",
+        "file": "/audio/strimer/07_olyasha.mp3",
+        "poster": "images/covers/strimer.jpg"
+      },
+      {
+        "title": "Бан",
+        "file": "/audio/strimer/08_ban.mp3",
+        "poster": "images/covers/strimer.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Летели на юг (Альбом 2019)",
+    "folder": [
+      {
+        "title": "SOS",
+        "file": "/audio/monada/leteli_na_yug/01_sos.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Все не так",
+        "file": "/audio/monada/leteli_na_yug/02_vse_ne_tak.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Стены знают",
+        "file": "/audio/monada/leteli_na_yug/03_steni_znayut.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Вакуум",
+        "file": "/audio/monada/leteli_na_yug/04_vakuum.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Летели на юг",
+        "file": "/audio/monada/leteli_na_yug/05_leteli_na_yug.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Молчим",
+        "file": "/audio/monada/leteli_na_yug/06_molchim.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Теплые ночи",
+        "file": "/audio/monada/leteli_na_yug/06_molchim.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      },
+      {
+        "title": "Чайф",
+        "file": "/audio/monada/leteli_na_yug/08_chayf.mp3",
+        "poster": "images/covers/monada/leteli_na_yug.jpg"
+      }
+    ]
+  }
+]
